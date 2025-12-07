@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![LMS Banner](https://via.placeholder.com/1200x300/31572c/ffffff?text=Learning+Management+System)
+![LMS Banner](https://img.shields.io/badge/Learning-Management-System-blue?style=for-the-badge&logo=github&logoColor=white)
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@
 
 **A modern, full-stack Learning Management System built for the future of online education**
 
-[📚 Documentation](#documentation) • [🚀 Demo](#demo) • [🐛 Report Bug](https://github.com/yourusername/lms/issues) • [✨ Request Feature](https://github.com/yourusername/lms/issues)
+[🚀 Getting Started](#quick-start) • [🐛 Report Bug](https://github.com/yourusername/lms/issues) • [✨ Request Feature](https://github.com/yourusername/lms/issues)
 
 </div>
 
@@ -20,6 +20,8 @@
 
 ## 📋 Table of Contents
 
+- [🌟 Overview](#-overview)
+- [📸 Screenshots](#-screenshots)
 - [✨ Features](#-features)
 - [🏗️ Architecture](#️-architecture)
 - [🚀 Quick Start](#-quick-start)
@@ -51,6 +53,22 @@ A **comprehensive Learning Management System** designed to power modern online e
 - 📱 **Responsive** - Works perfectly on all devices
 - ♿ **Accessible** - WCAG 2.1 compliant
 - 🌍 **Scalable** - Designed to handle millions of users
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage Screenshot](https://via.placeholder.com/800x400/4CAF50/FFFFFF?text=Homepage+Screenshot)
+
+### 📚 Course Dashboard
+![Course Dashboard](https://via.placeholder.com/800x400/2196F3/FFFFFF?text=Course+Dashboard)
+
+### 👨‍🏫 Instructor Panel
+![Instructor Panel](https://via.placeholder.com/800x400/FF9800/FFFFFF?text=Instructor+Panel)
+
+### 🔐 Admin Dashboard
+![Admin Dashboard](https://via.placeholder.com/800x400/9C27B0/FFFFFF?text=Admin+Dashboard)
 
 ---
 
@@ -158,28 +176,41 @@ A **comprehensive Learning Management System** designed to power modern online e
 ---
 
 ## 🏗️ Architecture
+
+### System Overview
+The LMS follows a modern full-stack architecture with a clear separation of concerns between the client and server layers, supported by robust external services for data persistence, caching, payments, and media storage.
+
+```
 ┌─────────────────────────────────────────────────────────────────────┐
-│ CLIENT LAYER │
-│ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │
-│ │ Next.js │ │ Redux │ │ Tailwind │ │ Axios │ │
-│ │ 14 App │──│ Toolkit │──│ CSS │──│ Client │ │
-│ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │
-└────────────────────────┬────────────────────────────────────────────┘
-│ HTTPS/WSS (Secure Communication)
-┌────────────────────────┴────────────────────────────────────────────┐
-│ SERVER LAYER │
-│ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ │
-│ │ Express │ │ Socket.IO │ │ JWT │ │Middlewares │ │
-│ │ REST API │──│ Real-time │──│ Auth │──│ Validation │ │
-│ └────────────┘ └────────────┘ └────────────┘ └────────────┘ │
-└────────────────────────┬────────────────────────────────────────────┘
-│
-┌───────────────┼───────────────┬──────────────┬────────────┐
-│ │ │ │ │
-┌────▼────┐ ┌────▼────┐ ┌────▼────┐ ┌────▼────┐ ┌───▼────┐
-│ MongoDB │ │ Redis │ │ Stripe │ │Cloudinary│ │ Email │
-│Database │ │ Cache │ │Payments │ │ Storage │ │ Service│
-└─────────┘ └─────────┘ └─────────┘ └─────────┘ └────────┘
+│                          CLIENT LAYER                               │
+│ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐         │
+│ │ Next.js   │ │ Redux     │ │ Tailwind  │ │ Axios     │         │
+│ │ 14 App    │◄►│ Toolkit   │◄►│ CSS       │◄►│ Client    │         │
+│ └────────────┘ └────────────┘ └────────────┘ └────────────┘         │
+└─────────────────────────────┬─────────────────────────────────────────┘
+                              │ HTTPS/WSS (Secure Communication)
+┌─────────────────────────────┼─────────────────────────────────────────┐
+│                          SERVER LAYER                               │
+│ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐         │
+│ │ Express   │ │ Socket.IO │ │ JWT       │ │ Middlewares│         │
+│ │ REST API  │◄►│ Real-time │◄►│ Auth      │◄►│ Validation │         │
+│ └────────────┘ └────────────┘ └────────────┘ └────────────┘         │
+└─────────────────────────────┬─────────────────────────────────────────┘
+                              │
+┌─────────────────────────────┼─────────────────────────────────────────┐
+│                          EXTERNAL SERVICES                          │
+│ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────┐ │
+│ │ MongoDB   │ │ Redis     │ │ Stripe    │ │ Cloudinary│ │ Email   │ │
+│ │ Database  │ │ Cache     │ │ Payments  │ │ Storage   │ │ Service │ │
+│ └────────────┘ └────────────┘ └────────────┘ └────────────┘ └────────┘ │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Key Components
+
+- **Client Layer**: Built with Next.js 14 for server-side rendering and optimal performance. Uses Redux Toolkit for state management, Tailwind CSS for styling, and Axios for API communication.
+- **Server Layer**: Express.js handles RESTful APIs, Socket.IO enables real-time features, JWT manages authentication, and custom middlewares ensure security and validation.
+- **External Services**: MongoDB for data persistence, Redis for caching, Stripe for payments, Cloudinary for media storage, and email services for notifications.
 
 ### 📁 Project Structure
 
