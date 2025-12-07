@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Poppins', sans-serif;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Reply to Your Question</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f8fa;
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #ffffff;
+      margin: 40px auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #007bff, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    .content {
+      padding: 25px 30px;
+    }
+
+    .content h2 {
+      color: #007bff;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      line-height: 1.6;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .cta a {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        padding: 20px;
+      }
+
+      .content h2 {
+        font-size: 18px;
+      }
+
+      .cta a {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📢 New Reply to Your Question</h1>
+    </div>
+    <div class="content">
+      <h2>Hey <%= name %> 👋</h2>
+      <p>
+        Someone has just replied to your question in the course:
+        <strong><%= title %></strong>.
+      </p>
+
+      <p>
+        Head back to your course to check the response and continue the discussion!
+      </p>
+
+    
+    </div>
+    <div class="footer">
+      © <%= new Date().getFullYear() %> iSkill Learning — All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
