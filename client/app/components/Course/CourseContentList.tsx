@@ -12,9 +12,9 @@ const CourseContentList: FC<Props> = (props) => {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set<string>());
 
   // Find unique video sections
-  const videoSections: string[] = [
-    ...new Set<string>(props.data?.map((item: any) => item.videoSection))
-  ];
+  const videoSections: string[] = Array.from(
+    new Set<string>(props.data?.map((item: any) => item.videoSection))
+  );
   
   let totalCount: number = 0;
 

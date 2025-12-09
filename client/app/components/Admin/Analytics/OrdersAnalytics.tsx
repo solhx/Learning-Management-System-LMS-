@@ -17,6 +17,19 @@ type Props = {
   isDashboard?: boolean;
 };
 
+interface AnalyticsItem {
+  name: string;
+  fullDate: string;
+  count: number;
+}
+
+interface Stats {
+  total: number;
+  average: string;
+  peak: number;
+  growth: string;
+}
+
 // Custom Tooltip Component
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -71,13 +84,13 @@ const OrdersAnalytics: FC<Props> = ({ isDashboard = false }) => {
   }, []);
 
   // Transform analytics data - Format month names for better display
-  const analyticsData = useMemo(() => {
+  const analyticsData = useMemo((): AnalyticsItem[] => {
     if (!data?.orders?.last12Months) return [];
 
     const transformed = data.orders.last12Months.map((item: any) => {
       // Convert "Nov 29, 2025" to "Nov 2025" for cleaner display
       const monthName = item.month.split(' ')[0] + ' ' + item.month.split(', ')[1];
-      
+
       return {
         name: monthName,
         fullDate: item.month, // Keep original for tooltip
@@ -92,10 +105,10 @@ const OrdersAnalytics: FC<Props> = ({ isDashboard = false }) => {
   const stats = useMemo(() => {
     if (!analyticsData.length) return null;
 
-    const total = analyticsData.reduce((sum:any, item:any) => sum + item.count, 0);
-    const monthsWithOrders = analyticsData.filter(item => item.count > 0).length;
+    const total = analyticsData.reduce((sum: number, item: AnalyticsItem) => sum + item.count, 0);
+    const monthsWithOrders = analyticsData.filter((item: AnalyticsItem) => item.count > 0).length;
     const average = monthsWithOrders > 0 ? (total / monthsWithOrders).toFixed(1) : '0.0';
-    const peak = Math.max(...analyticsData.map((d:any) => d.count), 0);
+    const peak = Math.max(...analyticsData.map((d: AnalyticsItem) => d.count), 0);
     const latest = analyticsData[analyticsData.length - 1]?.count || 0;
     const previous = analyticsData[analyticsData.length - 2]?.count || 0;
     const growth = previous > 0 ? (((latest - previous) / previous) * 100).toFixed(1) : latest > 0 ? '100' : '0';

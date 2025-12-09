@@ -1,5 +1,5 @@
 "use client"
-import React, { FC, useState } from 'react'
+import React, { FC, useState  } from 'react'
 import Protected from '../hooks/useProtected'
 import  Heading  from '../utils/Heading';
 import Header from '../components/Header';
@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import Footer from '../components/Routes/Footer';
 type Props = {}
 
-const page:FC<Props> = (props) => {
+const Page:FC<Props> = (props) => {
       const [open,setOpen] = useState(false);
       const [activeItem,setActiveItem] = useState(5);
       const [route,setRoute] = useState('Login');
@@ -37,4 +37,4 @@ const page:FC<Props> = (props) => {
   )
 }
 
-export default page 
+export default Page

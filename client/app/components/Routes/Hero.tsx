@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Hero: React.FC = () => {
+
+  const pathname = usePathname();
   const { data, isLoading, isFetching, isError } = useGetHeroDataQuery("Banner", {
     refetchOnMountOrArgChange: true,
   });
@@ -40,7 +42,6 @@ const Hero: React.FC = () => {
     { icon: 'TrendingUp', label: 'Success Rate', value: '95%', color: 'pink' },
   ];
 
-  const pathname = usePathname();
 const isActive = pathname === "/courses";
 
   const iconMap: { [key: string]: React.ElementType } = {

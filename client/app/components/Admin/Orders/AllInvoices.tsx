@@ -236,8 +236,8 @@ const AllInvoices: React.FC<Props> = ({ isDashboard }) => {
               checkboxSelection={!isDashboard}
               rows={rows}
               columns={columns}
-              components={isDashboard ? {} : { Toolbar: GridToolbar }}
-              disableSelectionOnClick
+              slots={isDashboard ? {} : { toolbar: GridToolbar }}
+              disableRowSelectionOnClick
               rowHeight={isDashboard ? 40 : 52}
               hideFooterPagination={isDashboard}
               hideFooterSelectedRowCount={isDashboard}

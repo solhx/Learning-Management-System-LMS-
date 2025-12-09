@@ -592,7 +592,7 @@ const handleReviewSubmit = async () => {
               Thank you for your review!
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              You've already reviewed this course
+              You have already reviewed this course
             </p>
           </div>
         </div>

@@ -42,7 +42,7 @@ const About = (props: Props) => {
     {
       icon: Heart,
       title: "Student First",
-      description: "Our students' success is our priority. We're committed to providing the best learning experience.",
+      description: "Our students&apos; success is our priority. We&apos;re committed to providing the best learning experience.",
       color: "red",
     },
     {
@@ -125,11 +125,11 @@ const About = (props: Props) => {
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up animation-delay-100">
             <span className="text-gray-900 dark:text-white">Empowering </span>
-            <span className="gradient-text">Tomorrow's Leaders</span>
+            <span className="gradient-text">Tomorrow is Leaders</span>
           </h1>
 
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200">
-            We're on a mission to democratize education and make world-class learning accessible to everyone, everywhere.
+            We&apos;re on a mission to democratize education and make world-class learning accessible to everyone, everywhere.
           </p>
 
           {/* Stats Grid */}
@@ -224,7 +224,7 @@ const About = (props: Props) => {
                 Our Vision
               </h3>
               <p className="text-center text-gray-700 dark:text-gray-300 leading-relaxed">
-                To become the world's leading online learning platform, where anyone can unlock their potential and achieve their career aspirations.
+                To become the worlds leading online learning platform, where anyone can unlock their potential and achieve their career aspirations.
               </p>
             </div>
           </div>
@@ -283,7 +283,7 @@ const About = (props: Props) => {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Our Achievements</h2>
-              <p className="text-blue-100 text-lg">Recognition we're proud of</p>
+              <p className="text-blue-100 text-lg">Recognition we are proud of</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

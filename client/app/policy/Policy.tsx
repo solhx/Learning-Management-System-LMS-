@@ -55,7 +55,7 @@ const Policy = (props: Props) => {
           </h1>
 
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            We're committed to protecting your privacy and being transparent about how we handle your data.
+            We are committed to protecting your privacy and being transparent about how we handle your data.
           </p>
         </div>
 
@@ -431,7 +431,7 @@ const Policy = (props: Props) => {
                       30-Day Money-Back Guarantee
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300">
-                      We offer a 30-day money-back guarantee on all course purchases. If you're not satisfied with a course, you can request a full refund within 30 days of purchase.
+                      We offer a 30-day money-back guarantee on all course purchases. If you are not satisfied with a course, you can request a full refund within 30 days of purchase.
                     </p>
 
                                       <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 p-6 rounded-lg mt-6">
@@ -440,7 +440,7 @@ const Policy = (props: Props) => {
                         Easy Refund Process
                       </h4>
                       <p className="text-green-800 dark:text-green-200">
-                        Simply contact our support team with your order details, and we'll process your refund within 5-7 business days.
+                        Simply contact our support team with your order details, and we will process your refund within 5-7 business days.
                       </p>
                     </div>
 

@@ -57,7 +57,7 @@ const FAQ = (props: Props) => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-blue-200 dark:border-blue-800 mb-6 shadow-lg">
             <HelpCircle className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              Got Questions? We've Got Answers
+              Got Questions? We have Got Answers
             </span>
           </div>
 
@@ -189,7 +189,7 @@ const FAQ = (props: Props) => {
               Still Have Questions?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6 font-Poppins">
-              Can't find the answer you're looking for? Our support team is here to help.
+              Can not find the answer you are looking for? Our support team is here to help.
             </p>
             <button className="group relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50">
               <span className="relative z-10 flex items-center gap-2">
