@@ -107,12 +107,12 @@ const isActive = pathname === "/courses";
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-20 md:mt-0">
         
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-blue-200 dark:border-blue-800 mb-6 animate-fade-in shadow-lg">
+        <div className="inline-flex mt-3 items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-blue-200 dark:border-blue-800 mb-6 animate-fade-in shadow-lg">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
           </span>
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span className="text-sm font-medium mx-3 text-gray-700 dark:text-gray-300">
             {badge}
           </span>
         </div>
@@ -204,7 +204,7 @@ const isActive = pathname === "/courses";
       </div>
 
       {/* Scroll Indicator - Fixed at Bottom Center */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 animate-bounce-slow">
+      <div className="absolute bottom-6 left-48%] -translate-x-1/2 z-20 animate-bounce-slow">
         <div className="w-6 h-10 rounded-full border-2 border-gray-400 dark:border-gray-600 flex justify-center p-2 bg-white/20 backdrop-blur-sm">
           <div className="w-1 h-3 bg-gray-600 dark:bg-white rounded-full animate-scroll"></div>
         </div>

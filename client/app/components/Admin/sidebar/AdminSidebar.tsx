@@ -18,7 +18,7 @@ import {
   QuizIcon,
   WysiwygIcon,
   ManageHistoryIcon,
-  SettingsIcon,
+ 
   ExitToAppIcon,
 } from "./Iconss";
 
@@ -78,7 +78,7 @@ const Sidebar = () => {
       "/admin/courses-analytics": "Courses Analytics",
       "/admin/orders-analytics": "Orders Analytics",
       "/admin/users-analytics": "Users Analytics",
-      "/admin/settings": "Settings",
+      
     };
 
     return routeMap[path] || "Dashboard";
@@ -415,16 +415,10 @@ const Sidebar = () => {
                 Extras
               </Typography>
             )}
-            <Item
-              title="Settings"
-              to="/admin/settings"
-              icon={<SettingsIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+           
             <div onClick={logoutHandler}>
               <Item
-                title="Logout"
+                title="Exit"
                 to="/"
                 icon={<ExitToAppIcon />}
                 selected={selected}
