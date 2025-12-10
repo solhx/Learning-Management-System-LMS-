@@ -119,7 +119,7 @@ const isActive = pathname === "/courses";
 
         {/* Title with Gradient Text */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up font-Josefin">
-          <span className="gradient-text block mb-2">{title}</span>
+          <span className="gradient-text block p-2 mb-2">{title}</span>
           <span className="text-gray-900 dark:text-white">{subtitle}</span>
         </h1>
 

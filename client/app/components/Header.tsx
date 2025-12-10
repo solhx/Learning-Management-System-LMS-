@@ -136,7 +136,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                       absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 
                       rounded-full blur-sm opacity-0 group-hover:opacity-75 
                       transition-opacity duration-300
-                      ${activeItem === 5 ? "opacity-75" : ""}
+                      ${activeItem === 6 ? "opacity-75" : ""}
                     `}></div>
                     <Image
                       src={userData?.user.avatar ? userData.user.avatar.url : avatar}
